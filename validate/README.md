@@ -9,7 +9,7 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'validate'
+gem 'validate', git: "https://github.com/MitchGianoni/checking_credit_cards/'
 ```
 
 And then execute:
@@ -19,10 +19,22 @@ And then execute:
 Or install it yourself as:
 
     $ gem install validate
+    $ gem specific_install -1 https://github.com/MitchGianoni/checking_credit_cards.git
 
 ## Usage
 
-TODO: Write usage instructions here
+Make & format txt file
+
+First create a txt file with numbers to test
+
+4111111111111111
+4111111111111
+4012888888881881
+378282246310005
+6011111111111117
+5105105105105100
+5105 1051 0510 5106
+9111111111111111
 
 ## Development
 
