@@ -4,4 +4,5 @@ require "validate/director"
 require "validate/card_scanner"
 
 module Validate
+	
 end
