@@ -6,30 +6,38 @@ array = ["4111111111111111","4111111111111","4012888888881881","378282246310005"
 def type?(account)
 
 	if account[0] == "4"
-		unless account.length == 13 || account.length == 16
-			type = "Invalid"
-		else
-			type = "Visa"
-		end
+		# if account.length == 13 || account.length == 16
+		# 	type = "Visa"
+		# else
+		# 	type = "Invalid"
+		# end
+		account.length == 13 || account.length == 16 ? type = "Visa" : type = "Invalid"
 	elsif ["51","52","53","54","55"].include?(account[0,2])
-		unless account.length == 16
-			type = "Invalid"
-		else
-			type = "MasterCard"
-		end
+		# if account.length == 16
+		# 	type = "Mastercard"
+		# else
+		# 	type = "Invalid"
+		# end
+
+		# got a nil here ????
+
+		account.length == 16 ? type = "Mastercard" : tyoe = "Invalid"
 	elsif ["34","37"].include?(account[0,2])
-		unless account.length == 15
-			type = "Invalid"
-		else
-			type = "Amex"
-		end
+		# if account.length == 15
+		# 	type = "Amex"
+		# else
+		# 	type = "Invalid"
+		# end
+		account.length == 15 ? type = "Amex" : type = "Invalid"
 	elsif account[0,4] == "6011"
-		unless account.length == 16
-			type ="Invalid"
-		else
-			type = "Discover"
-		end
+		# if account.length == 16
+		# 	type = "Discover"
+		# else
+		# 	type = "Invalid"
+		# end
+		account.length == 16 ? type = "Discover" : type = "Invalid"
 	else type = "Unknown"
+	
 	end
 
 	type
