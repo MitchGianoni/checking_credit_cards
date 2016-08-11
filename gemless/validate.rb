@@ -17,7 +17,7 @@ def type?(account)
 		else
 			type = "MasterCard"
 		end
-	elsif account[0,2].include?("34") || account[0,2].include?("37")
+	elsif ["34","37"].include?(account[0,2])
 		unless account.length == 15
 			type = "Invalid"
 		else
